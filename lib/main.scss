@@ -12,8 +12,17 @@ header {
   right: 0;
   z-index: 1000;
   height: 60px;
-  background: $color-primary;
-  
+  background: transparent;
+  -webkit-transition: background 300ms ease;
+  -moz-transition: background 300ms ease;
+  -ms-transition: background 300ms ease;
+  -o-transition: background 300ms ease;
+  transition: background 300ms ease;
+
+  &.isFixed {
+    background: $color-primary;
+  }
+
   .logo {
     margin: 14px 30px 0 0;
     height:32px;
@@ -27,20 +36,42 @@ header {
   
   .nav.pull-left {
     position: fixed;
-    top: 46px;
-    left: 0;
-    right: 0;
-    background-color: $color-primary;
-    padding: 20px;
+    top: 40px;
+    right: 10px;
+    width: 180px;
+    background-color: #fff;
+    padding: 10px;
     z-index: 0;
     display: none;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 10px rgba(black, .2);
+    -moz-box-shadow: 0 1px 10px rgba(black, .2);
+    box-shadow: 0 1px 10px rgba(black, .2);
+
+    &:after {
+      content: " ";
+      width: 0;
+      height: 0;
+      top: -8px;
+      right: 13px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      position: absolute;
+    }
     
     .menu-btn {
       width: 100%;
       text-align: center;
       height: 50px;
       line-height: 50px;
-      font-size: 20px;
+      font-size: 16px;
+      color: $color-primary;
+
+      &:hover {
+        background-color: $color-primary;
+        color: #fff;
+      }
     }
 
     &.isOpen {
@@ -76,22 +107,6 @@ header {
   }
   
   @media (min-width: 768px) {
-    background: -moz-linear-gradient(top,  rgba(0,0,0,0.50) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.50)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(0,0,0,0.50) 0%,rgba(0,0,0,0) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-    -webkit-transition: background 300ms ease;
-    -moz-transition: background 300ms ease;
-    -ms-transition: background 300ms ease;
-    -o-transition: background 300ms ease;
-    transition: background 300ms ease;
-
-    &.isFixed {
-      background: $color-primary;
-    }
 
     .logo {
       margin: 10px 40px 0 0;
@@ -107,6 +122,14 @@ header {
       bottom: auto;
       padding: 0;
       background: none;
+      width: auto;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      &:after {
+        display: none;
+      }
 
       .menu-btn {
         width: auto;
@@ -116,29 +139,29 @@ header {
         height: 32px;
         line-height: 32px;
         font-size: 14px;
+        color: #fff;
+
+        &.isActive {
+          background-color: #fff;
+          color: $color-primary
+        }
+
+        &:focus {
+          outline: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+        }
       }
       
       &.isOpen {
         display: block;
       }
     }
-    
-    .menu-btn {
-      
-      &.menu-btn-hamburger {
+
+    .nav.pull-right {
+      .menu-btn-hamburger {
         display: none;
-      }
-      
-      &.isActive {
-        background-color: #fff;
-        color: $color-primary
-      }
-      
-      &:focus {
-        outline: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
       }
     }
   }
@@ -167,12 +190,97 @@ header {
   }
 }
 
-.carousel {
+.languages {
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  display: none;
+  vertical-align: text-top;
+
+
+  a, a:active, a:focus {
+    color: #fff;
+
+    &.isActive {
+      text-decoration: underline;
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: 350px) {
+    display: inline-block;
+  }
+
+  @media (min-width: 768px) {
+    vertical-align: initial;
+    line-height: 32px;
+  }
+}
+
+
+section.section {
+  padding: 100px 0;
   
+  @media (min-width: 768px) {
+    padding: 0;
+  }
+}
+
+.section-lead {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 50px;
+  
+  span {
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+}
+
+
+
+.section-hero {
+  background: url("../img/thumbs-up.jpg") center no-repeat;
+  background-size: cover;
+
+  .hero-title {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    text-shadow: 0 1px 1px rgba(black, .3);
+  }
+
+  .hero-description {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+
+    .hero-title {
+      width: 500px;
+    }
+
+    .hero-description {
+      width: 500px;
+    }
+  }
+}
+
+
+
+
+
+
+
+.carousel {
+
   .carousel-control {
     display: none;
   }
-  
+
   .item {
     height: 700px;
     background-size: cover;
@@ -181,11 +289,11 @@ header {
     color: #fff;
     text-shadow: 0 1px 1px #000;
     margin-top: 50px;
-    
+
     &.item-slide-1 {
       background-image: url("../img/kid-shadow.jpg");
     }
-    
+
     &.item-slide-2 {
       background-image: url("../img/four-kids.jpg");
     }
@@ -193,13 +301,13 @@ header {
     &.item-slide-3 {
       background-image: url("../img/kid-homework.jpg");
     }
-    
+
     h1 {
       font-size: 40px;
       font-weight: 700;
       text-shadow: 0 1px 1px #000;
     }
-    
+
     .lead {
       font-size: 30px;
       font-weight: 400;
@@ -208,11 +316,11 @@ header {
   }
 
   @media (min-width: 768px) {
-    
+
     .carousel-control {
       display: block;
     }
-    
+
     .item {
       padding: 0;
       margin-top: 0;
@@ -235,14 +343,14 @@ header {
   .carousel-control.left {
     background-image: none;
   }
-  
+
   .carousel-control {
     height: 80px;
     top: 50%;
     margin-top: -40px;
     background: rgba(#000, .5);
     width: 80px;
-    
+
     span {
       text-shadow: none;
       opacity: 1;
@@ -250,24 +358,8 @@ header {
   }
 }
 
-section.section {
-  padding: 100px 0;
-  
-  @media (min-width: 768px) {
-    padding: 0;
-  }
-}
 
-.section-lead {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 50px;
-  
-  span {
-    font-weight: 700;
-    font-size: 1.2em;
-  }
-}
+
 
 .section-purpose {
   background-color: darken($color-primary, 10%);

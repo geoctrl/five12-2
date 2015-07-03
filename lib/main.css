@@ -8,7 +8,14 @@ header {
   right: 0;
   z-index: 1000;
   height: 60px;
-  background: #dd5826; }
+  background: transparent;
+  -webkit-transition: background 300ms ease;
+  -moz-transition: background 300ms ease;
+  -ms-transition: background 300ms ease;
+  -o-transition: background 300ms ease;
+  transition: background 300ms ease; }
+  header.isFixed {
+    background: #DD5826; }
   header .logo {
     margin: 14px 30px 0 0;
     height: 32px;
@@ -18,19 +25,37 @@ header {
     cursor: default; }
   header .nav.pull-left {
     position: fixed;
-    top: 46px;
-    left: 0;
-    right: 0;
-    background-color: #dd5826;
-    padding: 20px;
+    top: 40px;
+    right: 10px;
+    width: 180px;
+    background-color: #fff;
+    padding: 10px;
     z-index: 0;
-    display: none; }
+    display: none;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); }
+    header .nav.pull-left:after {
+      content: " ";
+      width: 0;
+      height: 0;
+      top: -8px;
+      right: 13px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      position: absolute; }
     header .nav.pull-left .menu-btn {
       width: 100%;
       text-align: center;
       height: 50px;
       line-height: 50px;
-      font-size: 20px; }
+      font-size: 16px;
+      color: #DD5826; }
+      header .nav.pull-left .menu-btn:hover {
+        background-color: #DD5826;
+        color: #fff; }
     header .nav.pull-left.isOpen {
       display: block; }
   header .menu-btn {
@@ -47,66 +72,51 @@ header {
     cursor: pointer; }
     header .menu-btn:hover {
       background-color: #fff;
-      color: #dd5826; }
+      color: #DD5826; }
     header .menu-btn.menu-btn-donate {
       border: solid 2px #fff; }
     header .menu-btn.menu-btn-hamburger {
       margin-left: 10px; }
   @media (min-width: 768px) {
-    header {
-      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-      /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, transparent));
-      /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-      /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-      /* Opera 11.10+ */
-      background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-      /* IE10+ */
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-      /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
-      /* IE6-9 */
-      -webkit-transition: background 300ms ease;
-      -moz-transition: background 300ms ease;
-      -ms-transition: background 300ms ease;
-      -o-transition: background 300ms ease;
-      transition: background 300ms ease; }
-      header.isFixed {
-        background: #dd5826; }
-      header .logo {
-        margin: 10px 40px 0 0;
-        height: 38px; }
-      header .nav.pull-left {
-        display: block;
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
-        padding: 0;
-        background: none; }
-        header .nav.pull-left .menu-btn {
-          width: auto;
-          margin-bottom: 0;
-          padding-left: 6px;
-          padding-right: 6px;
-          height: 32px;
-          line-height: 32px;
-          font-size: 14px; }
-        header .nav.pull-left.isOpen {
-          display: block; }
-      header .menu-btn.menu-btn-hamburger {
+    header .logo {
+      margin: 10px 40px 0 0;
+      height: 38px; }
+    header .nav.pull-left {
+      display: block;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      padding: 0;
+      background: none;
+      width: auto;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+      header .nav.pull-left:after {
         display: none; }
-      header .menu-btn.isActive {
-        background-color: #fff;
-        color: #dd5826; }
-      header .menu-btn:focus {
-        outline: none;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none; } }
+      header .nav.pull-left .menu-btn {
+        width: auto;
+        margin-bottom: 0;
+        padding-left: 6px;
+        padding-right: 6px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+        color: #fff; }
+        header .nav.pull-left .menu-btn.isActive {
+          background-color: #fff;
+          color: #DD5826; }
+        header .nav.pull-left .menu-btn:focus {
+          outline: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none; }
+      header .nav.pull-left.isOpen {
+        display: block; }
+    header .nav.pull-right .menu-btn-hamburger {
+      display: none; } }
   @media (min-width: 992px) {
     header {
       height: 78px; }
@@ -119,6 +129,59 @@ header {
         font-size: 18px;
         padding-left: 12px;
         padding-right: 12px; } }
+
+.languages {
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  display: none;
+  vertical-align: text-top; }
+  .languages a, .languages a:active, .languages a:focus {
+    color: #fff; }
+    .languages a.isActive, .languages a:active.isActive, .languages a:focus.isActive {
+      text-decoration: underline;
+      font-weight: 700; }
+  @media (min-width: 350px) {
+    .languages {
+      display: inline-block; } }
+  @media (min-width: 768px) {
+    .languages {
+      vertical-align: initial;
+      line-height: 32px; } }
+
+section.section {
+  padding: 100px 0; }
+  @media (min-width: 768px) {
+    section.section {
+      padding: 0; } }
+
+.section-lead {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 50px; }
+  .section-lead span {
+    font-weight: 700;
+    font-size: 1.2em; }
+
+.section-hero {
+  background: url("../img/thumbs-up.jpg") center no-repeat;
+  background-size: cover; }
+  .section-hero .hero-title {
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
+  .section-hero .hero-description {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .section-hero {
+      margin-top: 0; }
+      .section-hero .hero-title {
+        width: 500px; }
+      .section-hero .hero-description {
+        width: 500px; } }
 
 .carousel .carousel-control {
   display: none; }
@@ -169,20 +232,6 @@ header {
     text-shadow: none;
     opacity: 1; }
 
-section.section {
-  padding: 100px 0; }
-  @media (min-width: 768px) {
-    section.section {
-      padding: 0; } }
-
-.section-lead {
-  font-size: 24px;
-  text-align: center;
-  margin-bottom: 50px; }
-  .section-lead span {
-    font-weight: 700;
-    font-size: 1.2em; }
-
 .section-purpose {
   background-color: #b4461c; }
   .section-purpose .section-lead {
@@ -211,7 +260,7 @@ section.section {
     padding-left: 20px;
     text-align: center; }
   .purpose-box .purpose-text {
-    color: #dd5826;
+    color: #DD5826;
     padding: 20px;
     font-weight: 700;
     font-size: 20px;
@@ -260,7 +309,7 @@ section.section {
   width: 220px; }
   .progress-box .progress-number {
     font-size: 70px;
-    color: #dd5826;
+    color: #DD5826;
     font-weight: 300; }
   .progress-box .progress-text {
     font-weight: 700;
@@ -300,7 +349,7 @@ section.section {
         .section-participate .section-participate-contain .section-participate-box .section-participate-box-content span {
           font-weight: 700; }
       .section-participate .section-participate-contain .section-participate-box:hover {
-        background-color: #dd5826;
+        background-color: #DD5826;
         border-color: #b4461c;
         cursor: pointer; }
 
@@ -340,3 +389,5 @@ section.section {
   margin-top: 4px;
   font-size: 12px;
   color: #db3a38; }
+
+/*# sourceMappingURL=main.css.map */
