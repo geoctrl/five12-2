@@ -163,6 +163,11 @@ section.section {
     font-weight: 700;
     font-size: 1.2em; }
 
+.section-lead-text {
+  text-align: center;
+  font-size: 24px;
+  max-width: 860px; }
+
 .section-hero {
   background: url("../img/thumbs-up.jpg") center no-repeat;
   background-size: cover; }
@@ -182,6 +187,89 @@ section.section {
         width: 500px; }
       .section-hero .hero-description {
         width: 500px; } }
+
+.section-timeline {
+  background-color: #ffffff; }
+  .section-timeline .section-lead {
+    color: #397198; }
+  .section-timeline .section-lead-text {
+    color: #404040; }
+
+.timeline-container {
+  width: 260px;
+  height: 290px;
+  margin: 0 auto;
+  position: relative; }
+  .timeline-container .timeline-svg {
+    position: absolute;
+    top: 0;
+    width: 260px;
+    height: 290px;
+    margin: 0 auto; }
+    .timeline-container .timeline-svg line {
+      stroke: #d3d3d3; }
+  .timeline-container .timeline-unit {
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    font-size: .8em;
+    line-height: 1.2em;
+    background-color: #fff; }
+  .timeline-container .timeline-unit-sm {
+    top: 5px;
+    left: 20px;
+    border: solid 2px #a3a3a3;
+    width: 70px;
+    height: 70px;
+    color: #a3a3a3; }
+    .timeline-container .timeline-unit-sm .timeline-date {
+      margin-top: 12px; }
+    .timeline-container .timeline-unit-sm .timeline-number {
+      margin-top: 10px;
+      font-size: 1.6em;
+      font-weight: 700; }
+  .timeline-container .timeline-unit-md {
+    top: 0;
+    right: 15px;
+    border: solid 3px #808080;
+    color: #808080;
+    width: 80px;
+    height: 80px; }
+    .timeline-container .timeline-unit-md .timeline-date {
+      margin-top: 16px;
+      font-size: 1.2em; }
+    .timeline-container .timeline-unit-md .timeline-number {
+      margin-top: 10px;
+      font-size: 1.8em;
+      font-weight: 700; }
+  .timeline-container .timeline-unit-lg {
+    top: 140px;
+    left: 10px;
+    border: solid 4px #397198;
+    color: #397198;
+    width: 90px;
+    height: 90px; }
+    .timeline-container .timeline-unit-lg .timeline-date {
+      margin-top: 18px;
+      font-size: 1.3em; }
+    .timeline-container .timeline-unit-lg .timeline-number {
+      margin-top: 12px;
+      font-size: 2em;
+      font-weight: 700; }
+  .timeline-container .timeline-unit-xl {
+    top: 135px;
+    right: 5px;
+    background-color: #397198;
+    color: #fff;
+    width: 100px;
+    height: 100px; }
+    .timeline-container .timeline-unit-xl .timeline-date {
+      margin-top: 24px;
+      font-size: 1.4em; }
+    .timeline-container .timeline-unit-xl .timeline-number {
+      margin-top: 16px;
+      font-size: 2.2em;
+      font-weight: 700; }
 
 .carousel .carousel-control {
   display: none; }
@@ -295,30 +383,6 @@ section.section {
     margin-top: 20px;
     font-size: 18px;
     font-weight: 700; }
-
-.section-progress {
-  background-color: #e3e3e3; }
-
-.section-progress-contain {
-  max-width: 840px;
-  margin: 0 auto; }
-
-.progress-box {
-  text-align: center;
-  margin: 0 auto;
-  width: 220px; }
-  .progress-box .progress-number {
-    font-size: 70px;
-    color: #DD5826;
-    font-weight: 300; }
-  .progress-box .progress-text {
-    font-weight: 700;
-    color: #808080;
-    font-size: 16px;
-    margin-bottom: 40px; }
-  @media (min-width: 768px) {
-    .progress-box .process-text {
-      margin-bottom: 0; } }
 
 .section-participate {
   background: url("../img/four-kids-blue.jpg") center no-repeat;

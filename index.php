@@ -47,7 +47,7 @@
     </div>
 </header>
 
-<section class="section section-hero" id="hero">
+<div class="section section-hero" id="hero">
     <div class="container">
         <div class="hero-title"><?=$lang['hero']['title']?></div>
         <div class="hero-description"><?=$lang['hero']['description']?></div>
@@ -55,7 +55,51 @@
             Learn More
         </button>
     </div>
+</div>
+
+<section class="section section-timeline" id="timeline">
+    <div class="container">
+        <div class="section-icon">
+            <img src="/img/section-progress.png" alt="">
+        </div>
+        <div class="section-lead">
+            <span>TIMELINE</span>
+        </div>
+        <div class="timeline-container">
+            <svg class="timeline-svg">
+                <g class="line-sm">
+                    <line x1="50" x2="200" y1="41" y2="41" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
+                    <line x1="204" x2="204" y1="45" y2="104" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
+                    <line x1="204" x2="50" y1="106" y2="106" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
+                    <line x1="50" x2="50" y1="106" y2="160" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
+                    <line x1="60" x2="200" y1="185" y2="185" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
+                </g>
+            </svg>
+
+            <div class="timeline-unit timeline-unit-sm">
+                <div class="timeline-date">2012</div>
+                <div class="timeline-number">500</div>
+            </div>
+            <div class="timeline-unit timeline-unit-md">
+                <div class="timeline-date">2013</div>
+                <div class="timeline-number">1,000</div>
+            </div>
+            <div class="timeline-unit timeline-unit-lg">
+                <div class="timeline-date">2014</div>
+                <div class="timeline-number">1,500</div>
+            </div>
+            <div class="timeline-unit timeline-unit-xl">
+                <div class="timeline-date">2015</div>
+                <div class="timeline-number">2,000</div>
+            </div>
+        </div>
+        <div class="section-lead-text">
+            Something about how effective this is - or something...
+            Something about how effective this is - or something...
+        </div>
+    </div>
 </section>
+
 
 
 <script src="/lib/jquery/jquery.min.js"></script>
