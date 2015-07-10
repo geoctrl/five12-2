@@ -52,7 +52,7 @@
         <div class="hero-title"><?=$lang['hero']['title']?></div>
         <div class="hero-description"><?=$lang['hero']['description']?></div>
         <button class="btn btn-primary btn-lg">
-            Learn More
+            <?=$lang['hero']['cta']?>
         </button>
     </div>
 </div>
@@ -63,10 +63,13 @@
             <img src="/img/section-progress.png" alt="">
         </div>
         <div class="section-lead">
-            <span>TIMELINE</span>
+            <span><?=$lang['timeline']['title']?></span>
         </div>
         <div class="timeline-container">
             <svg class="timeline-svg">
+                <g class="line-md">
+                    <line x1="50" x2="450" y1="51" y2="51" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
+                </g>
                 <g class="line-sm">
                     <line x1="50" x2="200" y1="41" y2="41" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
                     <line x1="204" x2="204" y1="45" y2="104" stroke-width="4" stroke-linecap="square" stroke-dasharray="6, 12"/>
@@ -77,26 +80,23 @@
             </svg>
 
             <div class="timeline-unit timeline-unit-sm">
-                <div class="timeline-date">2012</div>
-                <div class="timeline-number">500</div>
+                <div class="timeline-date"><?=$lang['timeline']['smDate']?></div>
+                <div class="timeline-number"><?=$lang['timeline']['smNumber']?></div>
             </div>
             <div class="timeline-unit timeline-unit-md">
-                <div class="timeline-date">2013</div>
-                <div class="timeline-number">1,000</div>
+                <div class="timeline-date"><?=$lang['timeline']['mdDate']?></div>
+                <div class="timeline-number"><?=$lang['timeline']['mdNumber']?></div>
             </div>
             <div class="timeline-unit timeline-unit-lg">
-                <div class="timeline-date">2014</div>
-                <div class="timeline-number">1,500</div>
+                <div class="timeline-date"><?=$lang['timeline']['lgDate']?></div>
+                <div class="timeline-number"><?=$lang['timeline']['lgNumber']?></div>
             </div>
             <div class="timeline-unit timeline-unit-xl">
-                <div class="timeline-date">2015</div>
-                <div class="timeline-number">2,000</div>
+                <div class="timeline-date"><?=$lang['timeline']['xlDate']?></div>
+                <div class="timeline-number"><?=$lang['timeline']['xlNumber']?></div>
             </div>
         </div>
-        <div class="section-lead-text">
-            Something about how effective this is - or something...
-            Something about how effective this is - or something...
-        </div>
+        <div class="section-lead-text"><?=$lang['timeline']['description']?></div>
     </div>
 </section>
 

@@ -15,7 +15,21 @@ $en = array(
 
   "hero"=>array(
     "title"=>"Five.12 is awesome.",
-    "description"=>"Say something awesome about how super awesome Five.12 is. Say something awesome about how super awesome Five.12 is."
+    "description"=>"Say something awesome about how super awesome Five.12 is. Say something awesome about how super awesome Five.12 is.",
+    "cta"=>"Learn More"
+  ),
+
+  "timeline"=>array(
+    "title"=>"TIMELINE",
+    "description"=>"Something about how effective this is - or something... Something about how effective this is - or something...",
+    "smDate"=>"2012",
+    "smNumber"=>"500",
+    "mdDate"=>"2013",
+    "mdNumber"=>"1,000",
+    "lgDate"=>"2014",
+    "lgNumber"=>"1,500",
+    "xlDate"=>"2015",
+    "xlNumber"=>"2,000"
   )
 );
 
@@ -34,7 +48,21 @@ $es = array(
 
   "hero"=>array(
     "title"=>"Five.12 es impresionante.",
-    "description"=>"Diga algo increíble sobre cómo impresionante estupendo Five.12 es . Diga algo increíble sobre cómo impresionante estupendo Five.12 es."
+    "description"=>"Diga algo increíble sobre cómo impresionante estupendo Five.12 es . Diga algo increíble sobre cómo impresionante estupendo Five.12 es.",
+    "cta"=>"Aprende Más"
+  ),
+
+  "timeline"=>array(
+    "title"=>"CRONOLOGÍA",
+    "description"=>"Algo sobre la eficacia de este es - o algo ... Algo sobre la eficacia de este es - o algo ...",
+    "smDate"=>"2012",
+    "smNumber"=>"500",
+    "mdDate"=>"2013",
+    "mdNumber"=>"1,000",
+    "lgDate"=>"2014",
+    "lgNumber"=>"1,500",
+    "xlDate"=>"2015",
+    "xlNumber"=>"2,000"
   )
 );
 

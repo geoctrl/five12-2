@@ -166,7 +166,8 @@ section.section {
 .section-lead-text {
   text-align: center;
   font-size: 24px;
-  max-width: 860px; }
+  max-width: 860px;
+  margin: 0 auto; }
 
 .section-hero {
   background: url("../img/thumbs-up.jpg") center no-repeat;
@@ -200,12 +201,16 @@ section.section {
   height: 290px;
   margin: 0 auto;
   position: relative; }
+  .timeline-container g.line-md {
+    display: none; }
   .timeline-container .timeline-svg {
     position: absolute;
     top: 0;
     width: 260px;
     height: 290px;
     margin: 0 auto; }
+    .timeline-container .timeline-svg g {
+      opacity: 0; }
     .timeline-container .timeline-svg line {
       stroke: #d3d3d3; }
   .timeline-container .timeline-unit {
@@ -214,7 +219,8 @@ section.section {
     text-align: center;
     font-size: .8em;
     line-height: 1.2em;
-    background-color: #fff; }
+    background-color: #fff;
+    opacity: 0; }
   .timeline-container .timeline-unit-sm {
     top: 5px;
     left: 20px;
@@ -270,6 +276,33 @@ section.section {
       margin-top: 16px;
       font-size: 2.2em;
       font-weight: 700; }
+  @media (min-width: 768px) {
+    .timeline-container {
+      width: 500px;
+      height: 145px; }
+      .timeline-container g.line-sm {
+        display: none; }
+      .timeline-container g.line-md {
+        display: block; }
+      .timeline-container .timeline-svg {
+        width: 500px;
+        height: 145px; }
+      .timeline-container .timeline-unit-sm {
+        top: 17px;
+        left: 0; }
+      .timeline-container .timeline-unit-md {
+        left: 25%;
+        right: auto;
+        margin-left: 0;
+        top: 11px; }
+      .timeline-container .timeline-unit-lg {
+        right: 25%;
+        left: auto;
+        margin-right: 28px;
+        top: 5px; }
+      .timeline-container .timeline-unit-xl {
+        right: 0;
+        top: 0; } }
 
 .carousel .carousel-control {
   display: none; }

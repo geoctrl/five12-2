@@ -241,6 +241,7 @@ section.section {
   text-align: center;
   font-size: 24px;
   max-width: 860px;
+  margin: 0 auto;
 }
 
 
@@ -292,12 +293,20 @@ section.section {
   margin: 0 auto;
   position: relative;
 
+  g.line-md {
+    display: none;
+  }
+
   .timeline-svg {
     position: absolute;
     top: 0;
     width: 260px;
     height: 290px;
     margin: 0 auto;
+
+    g {
+      opacity: 0;
+    }
 
     line {
       stroke: #d3d3d3;
@@ -311,6 +320,7 @@ section.section {
     font-size: .8em;
     line-height: 1.2em;
     background-color: #fff;
+    opacity: 0;
   }
 
   .timeline-unit-sm {
@@ -392,6 +402,47 @@ section.section {
     }
   }
 
+  @media (min-width: 768px) {
+    width: 500px;
+    height: 145px;
+
+    g.line-sm {
+      display: none;
+    }
+
+    g.line-md {
+      display: block;
+    }
+
+    .timeline-svg {
+      width: 500px;
+      height: 145px;
+    }
+
+    .timeline-unit-sm {
+      top: 17px;
+      left: 0;
+    }
+
+    .timeline-unit-md {
+      left: 25%;
+      right: auto;
+      margin-left: 0;
+      top: 11px;
+    }
+
+    .timeline-unit-lg {
+      right: 25%;
+      left: auto;
+      margin-right: 28px;
+      top: 5px;
+    }
+
+    .timeline-unit-xl {
+      right: 0;
+      top: 0;
+    }
+  }
 }
 
 
