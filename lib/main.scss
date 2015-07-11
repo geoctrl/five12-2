@@ -445,7 +445,64 @@ section.section {
   }
 }
 
+.section-progress {
+  background-color: #e3e3e3;
 
+  .section-lead {
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+
+  .section-lead-text {
+
+  }
+
+  .progress-container {
+    position: relative;
+    height: 264px;
+    width: 274px;
+    margin: 0 auto;
+
+    .progress-paints {
+      width: 100%;
+      height: 400px;
+      display: block;
+    }
+
+    .progress-shirts {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      display: block;
+    }
+
+    .shirt-flat {
+      position: absolute;
+      width: 100px;
+      height: 27px;
+      opacity: 0;
+      background-image: url("/img/shirt-flat.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .shirt {
+      position: absolute;
+      width: 96px;
+      height: 108px;
+      opacity: 0;
+      background-image: url("/img/shirt.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .shirt-text, .pants-text {
+
+    }
+  }
+}
 
 
 
@@ -462,10 +519,10 @@ section.section {
     background-repeat: no-repeat;
     color: #fff;
     text-shadow: 0 1px 1px #000;
-    margin-top: 50px;
+    padding: 70px 20px;
 
     &.item-slide-1 {
-      background-image: url("../img/kid-shadow.jpg");
+      background-image: url("../img/john-doe-background.jpg");
     }
 
     &.item-slide-2 {
@@ -476,15 +533,25 @@ section.section {
       background-image: url("../img/kid-homework.jpg");
     }
 
-    h1 {
-      font-size: 40px;
-      font-weight: 700;
-      text-shadow: 0 1px 1px #000;
+    footer {
+      color: #fff;
+      opacity: .8;
     }
 
-    .lead {
-      font-size: 30px;
-      font-weight: 400;
+    .affect-item-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .affect-profile {
+      text-align: center;
+
+      img {
+        display: inline-block;
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+      }
     }
 
   }
@@ -499,14 +566,8 @@ section.section {
       padding: 0;
       margin-top: 0;
 
-      h1 {
-        font-size: 52px;
-        font-weight: 700;
-        text-shadow: 0 1px 1px #000;
-      }
-
-      .lead {
-        font-size: 30px;
+      .affect-profile {
+        text-align: right;
       }
     }
   }
