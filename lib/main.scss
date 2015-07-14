@@ -445,8 +445,10 @@ section.section {
   }
 }
 
-.section-progress {
+section.section-progress {
   background-color: #e3e3e3;
+  padding: 100px 0;
+
 
   .section-lead {
     color: $color-primary;
@@ -454,52 +456,72 @@ section.section {
   }
 
   .section-lead-text {
-
+    margin-bottom: 30px;
   }
 
-  .progress-container {
+  .svg-wrapper {
+    width: 260px;
     position: relative;
-    height: 264px;
-    width: 274px;
-    margin: 0 auto;
+    height: 100px;
+    margin: 20px auto 40px auto;
+  }
 
-    .progress-paints {
-      width: 100%;
-      height: 400px;
+  .progress-svg-container {
+    position: absolute;
+    right: 50%;
+    margin-right: 10px;
+  }
+
+  .progress-circle {
+    font-size: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: 10px;
+    padding-top: 16px;
+    border-radius: 50%;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background-color: $color-primary;
+    color: #fff;
+    line-height: 1em;
+    float: left;
+
+    span {
+      margin-bottom: 4px;
       display: block;
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+
+  .progress-svg {
+    height:100px;
+    fill:none;
+    stroke:#000000;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+
+    path, line, polyline {
+      stroke: #404040;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 100px 0;
+
+    .svg-wrapper {
+      width: 33.333333%;
+      float: left;
+      height: 114px;
     }
 
-    .progress-shirts {
-      position: relative;
-      width: 100%;
-      height: 200px;
-      display: block;
-    }
-
-    .shirt-flat {
-      position: absolute;
-      width: 100px;
-      height: 27px;
-      opacity: 0;
-      background-image: url("/img/shirt-flat.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .shirt {
-      position: absolute;
-      width: 96px;
-      height: 108px;
-      opacity: 0;
-      background-image: url("/img/shirt.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-
-    .shirt-text, .pants-text {
-
+    .progress-svg {
+      height: 114px;
     }
   }
 }
