@@ -312,6 +312,9 @@ section.section-progress {
     margin-bottom: 10px; }
   section.section-progress .section-lead-text {
     margin-bottom: 30px; }
+  section.section-progress .svg-contain {
+    max-width: 1000px;
+    margin: 0 auto; }
   section.section-progress .svg-wrapper {
     width: 260px;
     position: relative;
@@ -326,13 +329,13 @@ section.section-progress {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-top: -30px;
+    margin-top: -35px;
     margin-left: 10px;
-    padding-top: 16px;
+    padding-top: 21px;
     border-radius: 50%;
     text-align: center;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     background-color: #DD5826;
     color: #fff;
     line-height: 1em;
@@ -358,9 +361,14 @@ section.section-progress {
       section.section-progress .svg-wrapper {
         width: 33.333333%;
         float: left;
-        height: 114px; }
+        height: 140px; }
+      section.section-progress .progress-circle {
+        left: auto;
+        right: 20px; }
+      section.section-progress .progress-svg-container {
+        right: 90px; }
       section.section-progress .progress-svg {
-        height: 114px; } }
+        height: 140px; } }
 
 .carousel .carousel-control {
   display: none; }
