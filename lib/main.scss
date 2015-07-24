@@ -493,6 +493,7 @@ section.section-progress {
     color: #fff;
     line-height: 1em;
     float: left;
+    text-transform: uppercase;
 
     span {
       margin-bottom: 4px;
@@ -510,6 +511,7 @@ section.section-progress {
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-miterlimit:10;
+    opacity: 0;
 
     path, line, polyline {
       stroke: #404040;

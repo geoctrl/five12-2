@@ -339,7 +339,8 @@ section.section-progress {
     background-color: #DD5826;
     color: #fff;
     line-height: 1em;
-    float: left; }
+    float: left;
+    text-transform: uppercase; }
     section.section-progress .progress-circle span {
       margin-bottom: 4px;
       display: block;
@@ -352,7 +353,8 @@ section.section-progress {
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-miterlimit: 10; }
+    stroke-miterlimit: 10;
+    opacity: 0; }
     section.section-progress .progress-svg path, section.section-progress .progress-svg line, section.section-progress .progress-svg polyline {
       stroke: #404040; }
   @media (min-width: 768px) {
